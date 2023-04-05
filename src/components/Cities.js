@@ -1,6 +1,7 @@
 import React from "react";
 
 function Cities({ setSearch, name, setCity, popup }) {
+  localStorage.setItem("sehir", name);
   return (
     <li
       onClick={() => {

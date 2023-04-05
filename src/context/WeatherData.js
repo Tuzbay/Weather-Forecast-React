@@ -6,7 +6,7 @@ const WeatherData = createContext();
 export const WeatherProvide = ({ children }) => {
   const [currentInfo, setCurrentInfo] = useState(null);
   const [forecastInfo, setForecastInfo] = useState([]);
-  const [city, setCity] = useState("Istanbul");
+  const [city, setCity] = useState(localStorage.getItem("sehir") || "Istanbul");
 
   // * Anlık hava durumu verisini aşağıdaki hook ile çekiyorum.
   useEffect(() => {
