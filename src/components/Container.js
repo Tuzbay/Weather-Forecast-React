@@ -38,7 +38,11 @@ function Container() {
       <Header />
       <div className="app">
         <form onSubmit={searchLocation}>
-          <input list="data" value={search} onChange={handleChange} />
+          <input
+            value={search}
+            onChange={handleChange}
+            placeholder="Write a country, city or county"
+          />
         </form>
         {popup && (
           <ul className="popup">

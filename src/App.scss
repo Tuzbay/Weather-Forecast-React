@@ -62,8 +62,8 @@
 
     input {
       height: 40px;
-      max-width: 250px;
-      background-color: #dbdbdb;
+      width: 262px;
+      background-color: #beddea;
       border: none;
       outline: none;
       padding: 0 20px;
@@ -100,6 +100,15 @@
 
   .currentWeather {
     border: 1px solid #f3f3f3;
+  }
+
+  .app {
+    input {
+      background-color: #dbdbdb;
+    }
+  }
+  .popup {
+    background-color: #dbdbdb;
   }
 }
 
@@ -266,14 +275,14 @@
 // ! Main Finish ! \\
 
 .popup {
-  width: 290px;
+  width: 302px;
   height: fit-content;
   text-align: center;
   position: absolute;
-  background-color: #fff;
+  background-color: #beddea;
   color: #252525;
   top: 86px;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 6px 6px;
   padding: 0;
   font-size: 20px;
 
