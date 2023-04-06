@@ -1,13 +1,13 @@
 import React from "react";
 
-function Cities({ setSearch, name, setCity, popup }) {
+function Cities({ setSearch, name, setCity }) {
   localStorage.setItem("sehir", name);
   return (
     <li
+      className="options"
       onClick={() => {
         setSearch(name);
         setCity(name);
-        popup = false;
         setSearch("");
       }}
     >

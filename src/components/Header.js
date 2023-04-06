@@ -17,7 +17,6 @@ function Header() {
     "Amsterdam",
     "Madrid",
     "Berlin",
-    "Ankara",
   ];
 
   return (

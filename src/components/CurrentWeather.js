@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "../App.scss";
-
 import WeatherData from "../context/WeatherData";
 
 function CurrentWeather() {
