@@ -1,28 +1,33 @@
-// ! Container Start ! \\
+@mixin flexCenter($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
 
-.container {
-  background-image: url("./assets/light3.avif");
+@mixin background($url) {
+  background-image: url($url);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+// ! Container Start ! \\
+
+.container {
+  @include background("./assets/light3.avif");
   background-color: #dbdbdb;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flexCenter(column);
+  justify-content: flex-start;
   height: 100vh;
   transition: 0.2s ease-in all;
   overflow-x: hidden;
-  // font-family: "Open Sans", sans-serif;
-  // font-family: "Roboto", sans-serif;
-  // font-family: "Lato", sans-serif;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 
   .recommend-list {
     max-width: 820px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(row);
     flex-wrap: wrap;
 
     @media screen and (max-width: 1000px) {
@@ -55,10 +60,8 @@
   }
 
   .app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 100%;
+    @include flexCenter(column);
     justify-content: flex-start;
 
     form {
@@ -92,10 +95,7 @@
 // ! Dark Start ! \\
 
 .dark {
-  background-image: url("./assets/dark2.avif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include background("./assets/dark2.avif");
   color: #f3f3f3;
 
   .main {
@@ -140,10 +140,8 @@
     }
   }
   .left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-bottom: 20px;
+    @include flexCenter(column);
 
     h1 {
       margin-bottom: 6px;
@@ -166,9 +164,7 @@
   }
 
   .right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexCenter(column);
     margin-top: 20px;
     img {
       width: 100px;
@@ -187,9 +183,7 @@
 // ! Weather List Start ! \\
 
 .weather-list {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  @include flexCenter(column);
   height: 80vh;
   gap: 10px;
   width: 1000px;
@@ -238,9 +232,7 @@
   }
 
   @media screen and (max-width: 500px) {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexCenter(row);
     gap: 20px;
 
     p {
@@ -313,12 +305,10 @@
 }
 
 .footer {
-  position: absolute;
-  bottom: 10px;
+  position: static;
+  bottom: 20px;
   font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include flexCenter(column);
 
   .footer__bottom {
     text-align: center;
