@@ -2,7 +2,7 @@
 
 This website displays the current weather conditions and 5-day weather forecasts. In the Header section, a shortcut for some capitals has been created. Weather forecasts can be seen by searching the names of countries, cities or counties.
 
-## LIVE Link : https://weather-forecast-react-murex.vercel.app/
+## LIVE Link :
 
 ## Technologies Used in The Project
 
